@@ -77,6 +77,10 @@ namespace quad
 
 		public static Color rainbow(double v)
 		{
+			v = Math.Sqrt(v);
+			if (v == 1)
+				return Color.Black;
+
 			double r = 0.5 * (Math.Sin(2 * Math.PI * v) + 1) * 255.0;
 			double g = 0.5 * (Math.Sin(2 * Math.PI * v + 2.0 / 3.0 * Math.PI) + 1) * 255.0;
 			double b = 0.5 * (Math.Sin(2 * Math.PI * v + 4.0 / 3.0 * Math.PI) + 1) * 255.0;

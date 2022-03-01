@@ -31,6 +31,7 @@ namespace quad
         {
             this.img1 = new System.Windows.Forms.PictureBox();
             this.img2 = new System.Windows.Forms.PictureBox();
+            this.render_pb = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.img1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img2)).BeginInit();
             this.SuspendLayout();
@@ -49,8 +50,7 @@ namespace quad
             // 
             // img2
             // 
-            this.img2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.img2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.img2.Location = new System.Drawing.Point(531, 13);
             this.img2.Name = "img2";
@@ -58,12 +58,23 @@ namespace quad
             this.img2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.img2.TabIndex = 1;
             this.img2.TabStop = false;
+            this.img2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.img2_MouseClick);
+            // 
+            // render_pb
+            // 
+            this.render_pb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.render_pb.Location = new System.Drawing.Point(13, 532);
+            this.render_pb.Name = "render_pb";
+            this.render_pb.Size = new System.Drawing.Size(1030, 25);
+            this.render_pb.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1059, 539);
+            this.ClientSize = new System.Drawing.Size(1059, 569);
+            this.Controls.Add(this.render_pb);
             this.Controls.Add(this.img2);
             this.Controls.Add(this.img1);
             this.Name = "Form1";
@@ -78,6 +89,7 @@ namespace quad
 
         private System.Windows.Forms.PictureBox img1;
         private System.Windows.Forms.PictureBox img2;
+        private System.Windows.Forms.ProgressBar render_pb;
     }
 }
 
